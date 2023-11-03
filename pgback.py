@@ -93,7 +93,7 @@ def main(tmpdirname):
             check=True,
         )
     except subprocess.SubprocessError:
-        logger.exception("%s Error running pg_dump.", LOGGER_TAG)
+        logger.error("%s Error running pg_dump.", LOGGER_TAG)
         send_failure_email_notif()
         return
 
@@ -121,7 +121,7 @@ def main(tmpdirname):
             check=True,
         )
     except subprocess.SubprocessError:
-        logger.exception("%s Error running gpg.", LOGGER_TAG)
+        logger.error("%s Error running gpg.", LOGGER_TAG)
         send_failure_email_notif()
         return
 
