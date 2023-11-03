@@ -1,8 +1,8 @@
 # pgback.py: a simple Postgres-to-S3 backup script with GPG encryption
 
-This is a database backup tool suitable for small deployments for which continuous backup (for point-in-time restoration) is not required. It employs PostgreSQL’s standard `pg_dump` utility with GnuPG for public-key encryption and Amazon S3 for storage. S3-compatible services (such as DigitalOcean Spaces) may also work, though it might require some tweaks in the script. Basic email notifications are also sent upon failures.
+This is a database backup tool suitable for small deployments for which continuous backup (for point-in-time restoration) is not required. It employs PostgreSQL’s standard `pg_dump` utility with GnuPG for public-key encryption and Amazon S3 for storage. S3-compatible services (such as DigitalOcean Spaces) may also work, though it might require some tweaks in the script. Basic email notifications are sent upon failures.
 
-This script is intended for Linux servers, and has been tested specifically with Ubuntu 22.04.
+This Python script is intended for Linux servers, and has been tested specifically with Ubuntu 22.04 and Python 3.10.
 
 You are free to pronounce the name as “piggyback pie”. 😉
 
